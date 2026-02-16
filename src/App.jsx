@@ -7,7 +7,7 @@ import {
   FaNetworkWired, FaServer, FaTerminal, 
   FaGithub, FaInstagram, FaLinkedin, FaEnvelope,
   FaArrowRight, FaCheckCircle, FaDownload, 
-  FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp
+  FaMapMarkerAlt, FaWhatsapp
 } from 'react-icons/fa';
 
 const App = () => {
@@ -24,6 +24,17 @@ const App = () => {
   return (
     <div className="app-container">
       
+      {/* --- BACKGROUND DECORATION (PARTICLES) --- */}
+      <div className="bg-decoration">
+        <div className="blob blob-1"></div>
+        <div className="blob blob-2"></div>
+        <div className="blob blob-3"></div>
+        {/* Confetti Particles */}
+        {[...Array(20)].map((_, i) => (
+          <div key={i} className={`confetti c-${i % 3}`}></div>
+        ))}
+      </div>
+
       {/* --- NAVBAR --- */}
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="logo">AS<span className="dot">.</span></div>
@@ -33,7 +44,6 @@ const App = () => {
           <a href="#skills">Skill</a>
           <a href="#projects">Portfolio</a>
         </div>
-        {/* Tombol Download CV */}
         <a href="/cv-amirah.pdf" download className="btn-cv">
            Download CV <FaDownload className="icon-sm"/>
         </a>
@@ -43,14 +53,13 @@ const App = () => {
       <header className="hero" id="about">
         <div className="hero-content">
           <div className="badge-pill">
-             <span className="pulsing-dot"></span> Open to Work
+             <span className="pulsing-dot"></span> Open To Intership
           </div>
           <h1 className="name">Amirah Syauqillah H.</h1>
           <h2 className="role">Network Engineer & SysAdmin</h2>
           <p className="hero-desc">
             Siswi <strong>SMKN 1 Lumajang</strong> jurusan Teknik Komputer & Jaringan. 
-            Spesialisasi dalam manajemen bandwidth Mikrotik, routing Cisco, 
-            dan administrasi server Linux.
+            Ahli dalam topologi jaringan, manajemen server, dan troubleshooting.
           </p>
           
           <div className="hero-actions">
@@ -80,7 +89,7 @@ const App = () => {
         </section>
 
         {/* --- SKILLS SECTION --- */}
-        <section id="skills" className="section bg-dim">
+        <section id="skills" className="section">
           <div className="section-header">
              <span className="section-subtitle">HARD SKILLS</span>
              <h2 className="section-title">Keahlian Teknis</h2>
@@ -126,7 +135,6 @@ const App = () => {
               <div key={project.id} className="project-card">
                 <div className="card-image">
                    <img src={project.image} alt={project.title} />
-                   <div className="overlay"></div>
                 </div>
                 <div className="card-body">
                   <span className="cat-badge">{project.category}</span>
@@ -145,58 +153,47 @@ const App = () => {
 
       </main>
 
-      {/* --- FOOTER LENGKAP --- */}
+      {/* --- FOOTER --- */}
       <footer className="footer">
         <div className="footer-container">
           
-          {/* Kolom 1: Brand */}
           <div className="footer-col brand-col">
             <h3>AS.</h3>
             <p>
-              Membangun konektivitas yang stabil dan aman untuk masa depan digital.
-              Terbuka untuk kesempatan magang dan kolaborasi proyek.
+              Membangun konektivitas yang stabil dan aman.
+              Terbuka untuk kolaborasi dan magang.
             </p>
           </div>
 
-          {/* Kolom 2: Quick Links */}
           <div className="footer-col links-col">
-            <h4>Navigasi</h4>
+            <h4>Menu</h4>
             <ul>
               <li><a href="#about">Tentang</a></li>
               <li><a href="#skills">Keahlian</a></li>
               <li><a href="#projects">Portofolio</a></li>
-              <li><a href="/cv-amirah.pdf">Download CV</a></li>
             </ul>
           </div>
 
-          {/* Kolom 3: Kontak */}
           <div className="footer-col contact-col">
-            <h4>Hubungi Saya</h4>
+            <h4>Kontak</h4>
             <ul>
-              <li>
-                <FaMapMarkerAlt className="f-icon"/> 
-                <span>Lumajang, Jawa Timur</span>
-              </li>
-              <li>
-                <FaEnvelope className="f-icon"/> 
-                <span>amirah.tkj@smkn1lmj.sch.id</span>
-              </li>
-              <li>
-                <FaWhatsapp className="f-icon"/> 
-                <span>+62 812-3456-7890</span>
-              </li>
+              <li><FaMapMarkerAlt className="f-icon"/> Lumajang, Jawa Timur</li>
+              <li><FaEnvelope className="f-icon"/> amirah@smkn1lmj.sch.id</li>
+              <li><FaWhatsapp className="f-icon"/> +62 812-3456-7890</li>
             </ul>
+            
+            {/* SOCIAL ICONS MODERN (Tanpa Kotak) */}
             <div className="social-row">
-              <a href="#" aria-label="Github"><FaGithub/></a>
-              <a href="#" aria-label="LinkedIn"><FaLinkedin/></a>
-              <a href="#" aria-label="Instagram"><FaInstagram/></a>
+              <a href="#" className="soc-link github" aria-label="Github"><FaGithub/></a>
+              <a href="#" className="soc-link linkedin" aria-label="LinkedIn"><FaLinkedin/></a>
+              <a href="#" className="soc-link instagram" aria-label="Instagram"><FaInstagram/></a>
             </div>
           </div>
 
         </div>
         
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Amirah Syauqillah Harsono. Dibuat dengan React & Vite.</p>
+          <p>© {new Date().getFullYear()} Amirah Syauqillah Harsono.</p>
         </div>
       </footer>
     </div>

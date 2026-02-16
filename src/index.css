@@ -1,10 +1,7 @@
 :root {
-  --bg-color: #0f172a;       /* Warna background gelap */
-  --card-bg: #1e293b;        /* Warna kartu */
-  --text-primary: #f8fafc;   /* Teks utama putih */
-  --text-secondary: #94a3b8; /* Teks sekunder abu-abu */
-  --accent: #38bdf8;         /* Warna aksen biru muda */
-  --font-main: 'Poppins', sans-serif;
+  --bg-color: #f8f9fa;       /* Terang */
+  --text-primary: #002776;   /* Biru Tua */
+  --accent: #009c3b;         /* Hijau */
 }
 
 * {
@@ -14,11 +11,9 @@
 }
 
 body {
-  font-family: var(--font-main);
   background-color: var(--bg-color);
   color: var(--text-primary);
   line-height: 1.6;
-  scroll-behavior: smooth; /* Agar scroll halus */
 }
 
 a {
