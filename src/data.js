@@ -2,135 +2,73 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Alpan Agro Jaya",
-    category: "Website Company Profile",
-    description: "A company profile website for an agribusiness company with a modern design and complete information about products and services.",
-    image: "/assets/proyek/alpanagro.png",
-    techStack: ["Next.js", "CSS", "JavaScript"],
-    link: "https://alpan-agro-jaya.vercel.app/",
-    reverse: false
+    title: "Enterprise Network Topology Design",
+    category: "Cisco Packet Tracer",
+    description: "Perancangan arsitektur jaringan skala enterprise menggunakan VLAN Segmentation, VTP, dan Inter-VLAN Routing untuk optimalisasi trafik data antar divisi.",
+    image: "https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=1000&auto=format&fit=crop", 
+    techStack: ["Cisco IOS", "OSPF", "ACL Security"],
+    link: "#",
   },
   {
     id: 2,
-    title: "H2O Pure Bali",
-    category: "Layout Company Profile",
-    description: "UI/UX layout design for a company profile of a water filter company with a clean and modern concept.",
-    image: "/assets/proyek/H2Opurebali.jpeg",
-    techStack: ["Figma", "UI/UX Design"],
-    link: "https://www.figma.com/design/XFhqjrIOSDc46SRi68lLXt/H2OPURE-Layout-Company-Profile?node-id=0-1&t=GMLgkYsmFXmG3jbX-1",
-    reverse: true
+    title: "Hotspot Management System",
+    category: "Mikrotik RouterOS",
+    description: "Deployment sistem manajemen bandwidth (QoS) dan captive portal terintegrasi User Manager untuk mengontrol akses internet di lingkungan sekolah.",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bbc7c?q=80&w=1000&auto=format&fit=crop", 
+    techStack: ["Mikrotik", "Radius Server", "Walled Garden"],
+    link: "#",
   },
   {
     id: 3,
-    title: "Buku Tahunan Siswa SMKN 1 Lumajang",
-    category: "Website Online Book",
-    description: "A digital platform for student yearbooks with features like photo galleries, student profiles, and school memories.",
-    image: "/assets/proyek/bukutahunansiswa.png",
-    techStack: ["HTML", "CSS", "JavaScript", "PHP"],
-    link: "https://jurnalistik.smkn1lmj.sch.id/bts-smk/",
-    reverse: false
-  },
-  {
-    id: 4,
-    title: "Seblak Sultan Bleesing Store",
-    category: "Website Company Profile",
-    description: "Company profile website for a culinary business with an attractive design and complete menu information.",
-    image: "/assets/proyek/blessingstore.png",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    link: "https://praktikum-sizie.vercel.app/",
-    reverse: true
-  },
-  {
-    id: 5,
-    title: "Management BarangKu",
-    category: "Website Management Stok Barang",
-    description: "A web application for managing inventory and stock with full CRUD features and an analytics dashboard.",
-    image: "/assets/proyek/barangku.png",
-    techStack: ["HTML", "CSS", "JavaScript", "PHP"],
-    link: "https://projek-barangku.netlify.app/",
-    reverse: false
-  },
-  {
-    id: 6,
-    title: "Krunchi Melt Profile",
-    category: "Website Company Profile",
-    description: "A product catalog website for a food business with an attractive and user-friendly gallery layout.",
-    image: "/assets/proyek/krunchimelt.png",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    link: "https://renn6508.github.io/html_catalog/",
-    reverse: true
-  },
-   {
-    id: 7,
-    title: "Lemongan Mount(BETA)",
-    category: "Roblox Studio Projects",
-    description: "This game invites players to climb Mount Lemongan, passing through forest trails and rugged terrain until reaching the summit.",
-    image: "/assets/proyek/lemongan.png",
-    techStack: ["Lua 5.1", "GUI", "REST API", "R."],
-    link: "https://www.roblox.com/games/128162239485382/Lemongan-Mountain",
-    reverse: false
+    title: "Debian Dedicated Web Server",
+    category: "Linux Administration",
+    description: "Konfigurasi server Linux Debian sebagai Web Server (Apache), DNS Server (Bind9), dan Mail Server untuk kebutuhan hosting lokal intranet.",
+    image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=1000&auto=format&fit=crop",
+    techStack: ["Debian 11", "Bash CLI", "Apache2"],
+    link: "#",
   }
 ];
 
 // --- DATA SKILLS ---
 export const skillsData = {
-  languages: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Python",
-    "PHP",
-    "Next.js",
-    "Lua 5.1",
-    "Dart",
-    "Rust",
-    "R.",
-    "Java",
-    "TypeScript",
-
+  networking: [
+    "OSI Layer & TCP/IP",
+    "Subnetting / VLSM",
+    "Mikrotik RouterOS",
+    "Cisco Switching & Routing",
+    "Fiber Optic Splicing",
+    "Wireless Point-to-Point"
   ],
   tools: [
-    "Git",
-    "Github",
-    "VS Code",
-    "Postman",
-    "Composer",
-    "Figma",
-    "Canva",
-    "Inkscape",
-    "Node.js",
-    "Next.js",
-    "React",
-    "Flutter",
-    "MySQL",
-    "PostgreSQL",
+    "Winbox",
+    "Cisco Packet Tracer",
+    "GNS3 / EVE-NG",
+    "VirtualBox",
+    "Wireshark",
+    "Linux Terminal"
   ],
 };
 
-// --- DATA SERTIFIKAT ---
-export const certificatesData = [
+// --- DATA KEUNGGULAN (BARU) ---
+export const strengthsData = [
   {
     id: 1,
-    title: "Sertifikat Pelatihan Keterampilan Kewirausahaan SMK",
-    issuer: "Dinas Pendidikan Prov. Jatim dengan Institut Teknologi Sepuluh Nopember",
-    date: "2026",
-    image: "/assets/sertifikat/sertifikat-pervekt.png",
-    pdf: "/assets/sertifikat-pervekt"  
+    title: "Analytical Thinking",
+    desc: "Mampu menganalisis masalah jaringan (troubleshooting) secara logis dari Layer 1 hingga Layer 7 untuk menemukan solusi cepat.",
   },
   {
     id: 2,
-    title: "Dicoding: Belajar Dasar Pemrograman Web",
-    issuer: "Dicoding Indonesia",
-    date: "2023",
-    image: "/assets/sertifikat/cert-dicoding.jpg",
-    pdf: "/assets/sertifikat/cert-dicoding.pdf"
+    title: "Detail Oriented",
+    desc: "Teliti dalam konfigurasi IP Address, manajemen kabel (cabling management), dan keamanan firewall untuk meminimalisir error.",
   },
   {
     id: 3,
-    title: "Lomba Kompetensi Siswa (LKS) Web Tech",
-    issuer: "Dinas Pendidikan Prov. Jatim",
-    date: "2025",
-    image: "/assets/sertifikat/cert-lks.jpg",
-    pdf: "/assets/sertifikat/cert-lks.pdf"
+    title: "Fast Learner",
+    desc: "Cepat beradaptasi dengan teknologi baru, baik itu update firmware perangkat jaringan maupun distro Linux terbaru.",
+  },
+  {
+    id: 4,
+    title: "Team Collaboration",
+    desc: "Terbiasa bekerja dalam tim saat instalasi infrastruktur fisik maupun manajemen proyek jaringan virtual.",
   }
 ];
