@@ -248,9 +248,9 @@ const App = () => {
           <div className="footer-col contact-col">
             <h4>{text.footer.contact_title}</h4>
             <ul>
-              <li><FaMapMarkerAlt className="f-icon"/> Lumajang, Jawa Timur</li>
-              <li><FaEnvelope className="f-icon"/> amirah@smkn1lmj.sch.id</li>
-              <li><FaWhatsapp className="f-icon"/> +62 812-3456-7890</li>
+              <li><FaMapMarkerAlt className="f-icon"/> Jl.Cempaka No 3, Jogotrunan, Lumajang, Jawa Timur</li>
+              <li><FaEnvelope className="f-icon"/> syauqillahamira@gmail.com</li>
+              <li><FaWhatsapp className="f-icon"/> +62 812-5217-0084</li>
             </ul>
             <div className="social-row">
               <a href="#" className="soc-link github" aria-label="Github"><FaGithub/></a>
