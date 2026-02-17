@@ -8,6 +8,7 @@ export const projectsData = [
     image: "https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=1000&auto=format&fit=crop", 
     techStack: ["Cisco IOS", "OSPF", "ACL Security"],
     link: "#",
+    pdf: "/docs/topology-report.pdf" // Link dummy PDF
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ export const projectsData = [
     image: "https://images.unsplash.com/photo-1544197150-b99a580bbc7c?q=80&w=1000&auto=format&fit=crop", 
     techStack: ["Mikrotik", "Radius Server", "Walled Garden"],
     link: "#",
+    pdf: "/docs/hotspot-config.pdf"
   },
   {
     id: 3,
@@ -26,30 +28,31 @@ export const projectsData = [
     image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=1000&auto=format&fit=crop",
     techStack: ["Debian 11", "Bash CLI", "Apache2"],
     link: "#",
+    pdf: "/docs/debian-server.pdf"
   }
 ];
 
-// --- DATA SKILLS ---
+// --- DATA SKILLS (DENGAN PERSENTASE) ---
 export const skillsData = {
   networking: [
-    "OSI Layer & TCP/IP",
-    "Subnetting / VLSM",
-    "Mikrotik RouterOS",
-    "Cisco Switching & Routing",
-    "Fiber Optic Splicing",
-    "Wireless Point-to-Point"
+    { name: "OSI Layer & TCP/IP", level: 90 },
+    { name: "Subnetting / VLSM", level: 95 },
+    { name: "Mikrotik RouterOS", level: 85 },
+    { name: "Cisco Switching & Routing", level: 80 },
+    { name: "Fiber Optic Splicing", level: 75 },
+    { name: "Wireless Point-to-Point", level: 85 }
   ],
   tools: [
-    "Winbox",
-    "Cisco Packet Tracer",
-    "GNS3 / EVE-NG",
-    "VirtualBox",
-    "Wireshark",
-    "Linux Terminal"
+    { name: "Winbox", level: 95 },
+    { name: "Cisco Packet Tracer", level: 90 },
+    { name: "GNS3 / EVE-NG", level: 70 },
+    { name: "VirtualBox", level: 85 },
+    { name: "Wireshark", level: 75 },
+    { name: "Linux Terminal", level: 80 }
   ],
 };
 
-// --- DATA KEUNGGULAN (BARU) ---
+// --- DATA KEUNGGULAN ---
 export const strengthsData = [
   {
     id: 1,
