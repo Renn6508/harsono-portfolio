@@ -19,20 +19,25 @@ const App = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // --- Email Autofill  ---
+  const handleEmailClick = () => {
+    const email = "syauqillahamira@gmail.com";
+    const subject = "Tawaran Kerjasama / Magang"; // Judul otomatis
+    const body = "Halo Amirah Syauqillah Harsono, saya tertarik dengan profil Anda dan ingin berdiskusi mengenai..."; // Isi pesan otomatis
+    
+    // Membuka Gmail Web di Tab Baru
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`, '_blank');
+  };
+
   return (
     <div className="app-container">
       
-      {/* --- BACKGROUND DECORATION (NEW: Grid & Geo Shapes) --- */}
+      {/* --- BACKGROUND DECORATION --- */}
       <div className="bg-decoration">
-        {/* Pola Garis Grid (Jaringan) */}
         <div className="grid-pattern"></div>
-        
-        {/* Blob Warna Blur (Tetap ada agar tidak pucat) */}
         <div className="blob blob-1"></div>
         <div className="blob blob-2"></div>
         <div className="blob blob-3"></div>
-
-        {/* Bentuk Geometris Mengambang (Pengganti Confetti) */}
         <div className="geo-shape shape-triangle"></div>
         <div className="geo-shape shape-circle"></div>
         <div className="geo-shape shape-square"></div>
@@ -51,7 +56,6 @@ const App = () => {
         </div>
 
         <div className="nav-actions">
-          {/* Hanya Tombol CV */}
           <a href="/cv-amirah.pdf" download className="btn-cv">
              Download CV <FaDownload className="icon-sm"/>
           </a>
@@ -62,7 +66,7 @@ const App = () => {
       <header className="hero" id="about">
         <div className="hero-content">
           <div className="badge-pill">
-             <span className="pulsing-dot"></span> Siap Bekerja
+             <span className="pulsing-dot"></span> Ready For Internship
           </div>
           <h1 className="name">Amirah Syauqillah H.</h1>
           <h2 className="role">Network Engineer & SysAdmin</h2>
@@ -216,12 +220,26 @@ const App = () => {
             </ul>
           </div>
 
+          {/* BAGIAN YANG DIUBAH: EMAIL ME (Menggunakan JavaScript Handler) */}
           <div className="footer-col newsletter-col">
-            <h4>Berlangganan Info</h4>
-            <p>Dapatkan update seputar jaringan & teknologi terbaru.</p>
-            <div className="newsletter-box">
-              <input type="email" placeholder="Email Anda..." />
-              <button><FaArrowRight /></button>
+            <h4>Email Me</h4>
+            <p>Tertarik merekrut? Klik tombol di bawah untuk mengirim tawaran via Gmail.</p>
+            <div style={{ marginTop: '20px' }}>
+              <button 
+                onClick={handleEmailClick} 
+                className="btn-cv" 
+                style={{ 
+                  justifyContent: 'center', 
+                  width: '100%', 
+                  borderRadius: '12px',
+                  cursor: 'pointer',
+                  border: 'none', // Menghapus border default button
+                  fontSize: '1rem', // Menyesuaikan font
+                  fontFamily: 'inherit'
+                }}
+              >
+                Kirim Email <FaEnvelope />
+              </button>
             </div>
           </div>
 
